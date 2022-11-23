@@ -78,7 +78,7 @@
 
 				<div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in" >
 					<form action="/predict" id="upload-file" method="post" enctype="multipart/form-data"style="margin-left:50px;">
-						<input type="file" name="Upload" id="Upload" required accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" >
+						<input type="file" name="uploadedimg" id="uploadedimg" required accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" >
 						<input type="reset" value="Reset" class="upload rounded bg-info">
 						<input type="submit" value="Upload" class="upload rounded bg-info" onsubmit="check_file">
 					</form>
@@ -95,7 +95,7 @@
 
 
 <script>
-document.getElementById("Upload").addEventListener("change", validateFile)
+document.getElementById("uploadedimg").addEventListener("change", validateFile)
 
 function validateFile(){
   const allowedExtensions =  ['jpg','png'],

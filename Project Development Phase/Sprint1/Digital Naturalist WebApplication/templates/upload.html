@@ -72,12 +72,12 @@
           <div class="col-md-7 mb-5"  data-aos="fade"  >
            <h1 class="my-4 text-3xl md:text-5xl text-dark-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1"style="font-weight:bold;text-transform:capitalize;text-align:center;">
 						Welcome,{{session.Name}}</h1>
-				<p class="text-blue-400 font-bold pb-8 lg:pb-6 text-center md:text-left fade-in">
-
+				<p class="text-blue-400 font-bold pb-8 lg:pb-6 text-center md:text-left fade-in"style="font-style:oblique;margin-top:60px;font-size:20px;">
+                    Upload And Predict Your Nature
 				</p>
 
-				<div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in" style="margin-left:100px;">
-					<form action="" id="upload-file" method="post" enctype="multipart/form-data">
+				<div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in" >
+					<form action="/predict" id="upload-file" method="post" enctype="multipart/form-data"style="margin-left:50px;">
 						<input type="file" name="uploadedimg" id="uploadedimg" required accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" >
 						<input type="reset" value="Reset" class="upload rounded bg-info">
 						<input type="submit" value="Upload" class="upload rounded bg-info" onsubmit="check_file">
