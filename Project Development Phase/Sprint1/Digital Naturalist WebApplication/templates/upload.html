@@ -94,22 +94,7 @@
 
 
 
-<script>
-document.getElementById("uploadedimg").addEventListener("change", validateFile)
 
-function validateFile(){
-  const allowedExtensions =  ['jpg','png'],
-        sizeLimit = 1_000_000;
-  const { name:fileName, size:fileSize } = this.files[0];
-  const fileExtension = fileName.split(".").pop();
-  if(!allowedExtensions.includes(fileExtension)){
-    alert("Only image files - .jpg, .jpeg, .png, .tiff ");
-    this.value = null;
-  }else if(fileSize > sizeLimit){
-    alert("file size too large")
-    this.value = null;
-  }
-}</script>
 
 
   <script src="{{ url_for('static',filename='files/js/jquery-3.3.1.min.js') }}"></script>
